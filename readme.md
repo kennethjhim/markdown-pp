@@ -1,6 +1,7 @@
 
 Markdown Preprocessor (MarkdownPP)
 ==================================
+NOTE: This is my version - I edited the INCLUDECODE part. Download this as zip file and install using pip.
 
 The Markdown Preprocessor is a Python module designed to add extended features
 on top of the excellent Markdown syntax defined by John Gruber.  These additions
