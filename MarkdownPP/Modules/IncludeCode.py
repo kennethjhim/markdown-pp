@@ -56,11 +56,20 @@ class IncludeCode(Include):
         try:
             with open(code_file, "r") as fs:
                 code_data = fs.readlines()
-
+                
+            '''
+            # to remove this - make includecode work without the code enclosure
             return (
                 "```" + (str(lang) if lang is not None else "") + "\n"
                 + "".join(self._select_lines(code_data, lines))
                 + "\n```\n"
+            )
+            '''
+            
+            return (
+                (str(lang) if lang is not None else "") + "\n"
+                + "".join(self._select_lines(code_data, lines))
+                + "\n\n"
             )
 
         except (IOError, OSError) as exc:
